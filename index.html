@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site de test - Render</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <p class="tag">Déploiement de test</p>
+    <h1>Ça marche.</h1>
+    <p class="lead">Ce site statique a été généré et déployé automatiquement sur Render depuis Claude.</p>
+    <div class="card">
+      <div><span>Hébergeur</span><strong>Render (Static Site)</strong></div>
+      <div><span>Déployé le</span><strong id="date">08 novembre 2026</strong></div>
+      <div><span>Heure locale</span><strong id="clock">--:--:--</strong></div>
+    </div>
+  </main>
+  <script>
+    const clock = document.getElementById('clock');
+    const tick = () => { clock.textContent = new Date().toLocaleTimeString('fr-FR'); };
+    tick(); setInterval(tick, 1000);
+  </script>
+</body>
+</html>
